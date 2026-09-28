@@ -3,51 +3,101 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Firma de correo – Eduardo Basulto Jiménez</title>
+<title>Firmas de correo · HostDime México / MEXDC</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-  :root{--or:#F47721;--or2:#C96A2B;--gr:#516062;--gr2:#738185;--line:#E3E7E8;--bg:#F4F6F6}
-  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-  body{margin:0;background:var(--bg);color:var(--gr);font:500 15px/1.55 'Raleway',Arial,Helvetica,sans-serif}
-  header{background:var(--or);color:#fff;padding:26px 20px 22px}
-  header h1{margin:0;font-weight:900;font-size:24px;line-height:1.15}
-  header p{margin:6px 0 0;font-size:14px;opacity:.92}
-  main{max-width:560px;margin:0 auto;padding:18px 16px 48px}
-  .preview{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 12px;overflow-x:auto}
-  .preview h2,.panel h2{margin:0 0 10px;font-size:15px;font-weight:700;color:var(--gr)}
-  #sig{display:inline-block;background:#fff}
-  .tabs{display:flex;gap:6px;margin:22px 0 0;border-bottom:2px solid var(--line)}
-  .tabs button{flex:1;font:700 14px 'Raleway',Arial,sans-serif;color:var(--gr2);background:none;border:0;border-bottom:3px solid transparent;margin-bottom:-2px;padding:12px 4px;cursor:pointer}
-  .tabs button[aria-selected="true"]{color:var(--or);border-bottom-color:var(--or)}
-  .tabs button:focus-visible,.btn:focus-visible{outline:3px solid rgba(244,119,33,.45);outline-offset:2px}
-  .panel{display:none;background:#fff;border:1px solid var(--line);border-top:0;border-radius:0 0 14px 14px;padding:18px 16px}
-  .panel.on{display:block}
-  .btn{display:block;width:100%;font:700 16px 'Raleway',Arial,sans-serif;border:0;border-radius:12px;padding:15px;background:var(--or);color:#fff;cursor:pointer}
-  .btn.sec{background:#fff;color:var(--gr);border:2px solid var(--line);margin-top:10px}
-  .btn:active{opacity:.85}
-  #msg{margin:10px 0 0;font-size:14px;min-height:20px}
-  #msg.ok{color:#2c7a45} #msg.err{color:#b3261e}
-  ol{margin:14px 0 0;padding-left:22px}
-  li{margin:0 0 9px}
-  li b{color:#2b3638}
-  .key{background:#FFF3EA;border-left:4px solid var(--or);border-radius:8px;padding:12px 14px;margin:14px 0 0;font-size:14px}
-  .note{font-size:13px;color:var(--gr2);margin:12px 0 0}
+:root {
+  --orange:#F47721;
+  --teal:#02958A;
+  --ink:#243033;
+  --gray:#516062;
+  --muted:#738185;
+  --line:#E3E7E8;
+  --bg:#F5F7F7;
+  --white:#fff;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--gray);font:500 15px/1.55 Raleway,Arial,sans-serif}
+header{
+  position:relative; overflow:hidden;
+  background:linear-gradient(135deg,#20292b 0%,#303c3f 100%);
+  color:#fff; padding:64px 24px 72px;
+}
+header:after{
+  content:""; position:absolute; width:360px;height:360px;border:70px solid rgba(255,255,255,.035);
+  border-radius:50%; right:-120px; top:-170px;
+}
+.hero{max-width:980px;margin:auto;position:relative;z-index:1}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;opacity:.7;margin-bottom:12px}
+h1{margin:0;font-size:clamp(32px,5vw,52px);line-height:1.02;font-weight:900;letter-spacing:-.035em}
+.hero p{max-width:650px;margin:18px 0 0;font-size:17px;color:rgba(255,255,255,.78)}
+main{max-width:980px;margin:-30px auto 0;padding:0 18px 60px;position:relative;z-index:2}
+.chooser{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 14px 35px rgba(35,48,51,.07);transition:.2s}
+.card:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(35,48,51,.11)}
+.card .bar{height:5px;border-radius:99px;margin-bottom:20px;background:var(--orange)}
+.card.mex .bar{background:var(--teal)}
+.card h2{margin:0;color:var(--ink);font-size:22px}
+.card p{margin:7px 0 20px;color:var(--muted)}
+.open{display:inline-block;text-decoration:none;border:0;border-radius:10px;padding:11px 17px;font:700 14px Raleway;background:var(--ink);color:#fff;cursor:pointer}
+.card.mex .open{background:var(--teal)}
+.workspace{display:none;margin-top:24px;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 12px 30px rgba(35,48,51,.06)}
+.workspace.active{display:block}
+.workspace-head{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:18px 20px;border-bottom:1px solid var(--line)}
+.workspace-head h2{margin:0;color:var(--ink);font-size:18px}
+.close{background:#f1f3f3;border:0;border-radius:9px;padding:9px 13px;color:var(--gray);font-weight:700;cursor:pointer}
+.preview{padding:18px 16px;border-bottom:1px solid var(--line);overflow-x:auto}
+.preview-title{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:12px}
+.sig{display:inline-block;background:#fff}
+.tabs{display:flex;gap:4px;padding:0 16px;border-bottom:2px solid var(--line);overflow-x:auto}
+.tabs button{white-space:nowrap;flex:1;font:700 14px Raleway;color:var(--muted);background:none;border:0;border-bottom:3px solid transparent;margin-bottom:-2px;padding:13px 7px;cursor:pointer}
+.tabs button[aria-selected=true]{color:var(--accent);border-bottom-color:var(--accent)}
+.panel{display:none;padding:20px}
+.panel.on{display:block}
+.panel p{margin-top:0}
+.btn{display:block;width:100%;font:700 15px Raleway;border:0;border-radius:11px;padding:14px;background:var(--accent);color:#fff;cursor:pointer}
+.btn.sec{background:#fff;color:var(--gray);border:2px solid var(--line);margin-top:10px}
+.msg{margin:10px 0 0;min-height:20px;font-size:14px}
+.msg.ok{color:#2c7a45} .msg.err{color:#b3261e}
+ol{margin:14px 0 0;padding-left:22px} li{margin:0 0 9px}
+li b{color:#2b3638}
+.key{background:var(--keybg);border-left:4px solid var(--accent);border-radius:8px;padding:12px 14px;margin:14px 0 0;font-size:14px}
+.note{font-size:13px;color:var(--muted)}
+footer{text-align:center;color:var(--muted);font-size:12px;padding:0 20px 30px}
+@media(max-width:700px){.chooser{grid-template-columns:1fr}header{padding:48px 20px 64px}.card{padding:20px}}
 </style>
 </head>
 <body>
 <header>
-  <h1>Firma de correo para iPhone</h1>
-  <p>Eduardo Basulto Jiménez · HostDime México</p>
+  <div class="hero">
+    <div class="eyebrow">Centro de firmas · iPhone</div>
+    <h1>Tu firma, lista para Mail.</h1>
+    <p>Selecciona la organización que corresponde a tu firma y sigue el proceso para instalarla en tu iPhone.</p>
+  </div>
 </header>
 
 <main>
-  <section class="preview">
-    <h2>Así se ve la firma</h2>
-    <div id="sig">
-<!-- INICIO FIRMA -->
-<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="500" style="width:500px;border-collapse:collapse;font-family:'Raleway',Arial,Helvetica,sans-serif;">
+  <section class="chooser">
+    <article class="card" style="--accent:var(--orange);--keybg:#FFF3EA">
+      <div class="bar"></div>
+      <h2>HostDime México</h2>
+      <p>Firma de Eduardo Basulto Jiménez · CEO HostDime México.</p>
+      <button class="open" data-open="host">Usar esta firma →</button>
+    </article>
+    <article class="card mex" style="--accent:var(--teal);--keybg:#E8F6F5">
+      <div class="bar"></div>
+      <h2>MEXDC</h2>
+      <p>Firma de Eduardo Basulto · Secretario General · MEXDC.</p>
+      <button class="open" data-open="mex">Usar esta firma →</button>
+    </article>
+  </section>
+
+  <section id="host" class="workspace" style="--accent:var(--orange);--keybg:#FFF3EA">
+    <div class="workspace-head"><h2>Firma · HostDime México</h2><button class="close">Cerrar</button></div>
+    <div class="preview"><div class="preview-title">Vista previa</div><div class="sig host-sig"><table role="presentation" cellpadding="0" cellspacing="0" border="0" width="500" style="width:500px;border-collapse:collapse;font-family:'Raleway',Arial,Helvetica,sans-serif;">
   <tr>
     <!-- Izquierda: bloque naranja + foto + logo -->
     <td width="226" valign="top" style="width:226px;padding:0;">
@@ -114,19 +164,15 @@
       </table>
     </td>
   </tr>
-</table>
-<!-- FIN FIRMA -->
-    </div>
-  </section>
-
-  <nav class="tabs" role="tablist">
-    <button role="tab" aria-selected="true" data-p="p1">Copiar aquí</button>
-    <button role="tab" aria-selected="false" data-p="p2">Desde un correo</button>
-    <button role="tab" aria-selected="false" data-p="p3">Si falla</button>
-  </nav>
-
-  <section id="p1" class="panel on" role="tabpanel">
-    <button class="btn" id="copy">Copiar firma</button>
+</table></div></div>
+    <nav class="tabs" data-target="host">
+      <button aria-selected="true" data-p="p1">Copiar aquí</button>
+      <button aria-selected="false" data-p="p2">Desde un correo</button>
+      <button aria-selected="false" data-p="p3">Si falla</button>
+    </nav>
+    <section class="panel on" data-panel="p1">
+      <button class="btn copy">Copiar firma</button><p class="msg" aria-live="polite"></p>
+      <button class="btn" id="copy">Copiar firma</button>
     <p id="msg" aria-live="polite"></p>
     <ol>
       <li>Abre esta página en <b>Safari</b> y toca <b>Copiar firma</b>.</li>
@@ -138,66 +184,192 @@
     <ol start="5">
       <li>Sal de Ajustes y abre un correo nuevo en Mail para confirmar.</li>
     </ol>
-  </section>
-
-  <section id="p2" class="panel" role="tabpanel">
-    <p style="margin:0">El método más confiable si el paso de agitar no funciona en su iPhone:</p>
+    </section>
+    <section class="panel" data-panel="p2"><p style="margin:0">El método más confiable si el paso de agitar no funciona en su iPhone:</p>
     <ol>
       <li>En la computadora, desde Gmail (donde la firma ya está instalada), envía un correo nuevo a <b>eduardo.j@hostdime.com.mx</b> que solo lleve la firma.</li>
       <li>En el iPhone, abre ese correo en la app <b>Mail</b>.</li>
       <li>Mantén presionado sobre la firma, selecciona desde la foto hasta los íconos de redes y toca <b>Copiar</b>.</li>
       <li>Ve a <b>Ajustes → Mail → Firma</b>, borra lo que haya y <b>Pega</b>.</li>
       <li><b>Agita el iPhone → Deshacer</b> para recuperar el formato.</li>
-    </ol>
-  </section>
-
-  <section id="p3" class="panel" role="tabpanel">
-    <p style="margin:0">Si el botón no copió, selecciona la firma a mano:</p>
-    <button class="btn sec" id="select">Seleccionar firma</button>
+    </ol></section>
+    <section class="panel" data-panel="p3">
+      <p style="margin:0">Si el botón no copió, selecciona la firma a mano:</p>
+    <button class="btn sec select">Seleccionar firma</button>
     <ol>
       <li>Con la firma ya seleccionada, toca <b>Copiar</b> en el menú que aparece.</li>
       <li>Pégala en Ajustes → Mail → Firma y <b>agita → Deshacer</b>.</li>
     </ol>
     <p class="note">Si las imágenes salen como cuadros vacíos, revisa que los archivos de la carpeta "Firma Eduardo" en Drive sigan con acceso "Cualquier persona con el enlace". Si ves texto azul subrayado, faltó el paso de agitar y deshacer.</p>
+    </section>
+  </section>
+
+  <section id="mex" class="workspace" style="--accent:var(--teal);--keybg:#E8F6F5">
+    <div class="workspace-head"><h2>Firma · MEXDC</h2><button class="close">Cerrar</button></div>
+    <div class="preview"><div class="preview-title">Vista previa</div><div class="sig mex-sig"><table cellpadding="0" cellspacing="0" border="0" role="presentation" style="width:525px; font-family:Arial, sans-serif; font-size:10pt; background-color:transparent;">
+    <tr>
+      <td width="125" valign="middle" style="width:125px; padding-right:14px; border-right:1px solid #02958A; vertical-align:middle;">
+        <a href="https://asmexdc.com/" target="_blank" style="text-decoration:none;">
+          <img src="https://asmexdc.com/wp-content/uploads/MEXDC_S.png" alt="MEXDC" width="105" border="0" style="display:block; width:105px; height:auto; border:0; outline:none; text-decoration:none;">
+        </a>
+      </td>
+
+      <td valign="middle" style="padding-left:22px; vertical-align:middle;">
+        <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="font-family:Arial, sans-serif; font-size:10pt; background-color:transparent;">
+          <tr>
+            <td style="padding-bottom:8px; font-family:Arial, sans-serif; white-space:nowrap;">
+              
+              <font face="Arial, sans-serif" color="#02958A" style="font-family:Arial, sans-serif; font-size:11pt; color:#02958A; font-weight:bold;">
+                <b>Eduardo Basulto</b>
+              </font>
+
+              <font face="Arial, sans-serif" color="#000000" style="font-family:Arial, sans-serif; font-size:11pt; color:#000000; font-weight:bold;">
+                <b> | Secretario General</b>
+              </font>
+
+            </td>
+          </tr>
+
+          <tr>
+            <td style="font-family:Arial, sans-serif; font-size:10pt; color:#000000; line-height:17px; mso-line-height-rule:exactly;">
+
+              <font face="Arial, sans-serif" color="#02958A" style="font-family:Arial, sans-serif; font-size:10pt; color:#02958A; font-weight:bold;">
+                <b>a:</b>
+              </font>
+
+              <font face="Arial, sans-serif" color="#000000" style="font-family:Arial, sans-serif; font-size:10pt; color:#000000;">
+                Asociaci&oacute;n Mexicana de Data Centers
+              </font>
+
+              <br>
+
+              <font face="Arial, sans-serif" color="#02958A" style="font-family:Arial, sans-serif; font-size:10pt; color:#02958A; font-weight:bold;">
+                <b>e:</b>
+              </font>
+
+              <a href="mailto:vinculacion@asmexdc.com" style="color:#000000; text-decoration:none;">
+                <font face="Arial, sans-serif" color="#000000" style="font-family:Arial, sans-serif; font-size:10pt; color:#000000; text-decoration:none;">
+                  secretario.general@asmexdc.com
+                </font>
+              </a>
+
+              <font face="Arial, sans-serif" color="#000000" style="font-family:Arial, sans-serif; font-size:10pt; color:#000000;">
+                |
+              </font>
+
+              <font face="Arial, sans-serif" color="#02958A" style="font-family:Arial, sans-serif; font-size:10pt; color:#02958A; font-weight:bold;">
+                <b>w:</b>
+              </font>
+
+              <a href="https://www.asmexdc.com" target="_blank" style="color:#000000; text-decoration:none;">
+                <font face="Arial, sans-serif" color="#000000" style="font-family:Arial, sans-serif; font-size:10pt; color:#000000; text-decoration:none;">
+                  www.asmexdc.com
+                </font>
+              </a>
+
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table></div></div>
+    <nav class="tabs" data-target="mex">
+      <button aria-selected="true" data-p="p1">Copiar aquí</button>
+      <button aria-selected="false" data-p="p2">Desde un correo</button>
+      <button aria-selected="false" data-p="p3">Si falla</button>
+    </nav>
+    <section class="panel on" data-panel="p1">
+      <button class="btn copy">Copiar firma</button><p class="msg" aria-live="polite"></p>
+      <button class="btn" id="copy">Copiar firma</button>
+    <p id="msg" aria-live="polite"></p>
+    <ol>
+      <li>Abre esta página en <b>Safari</b> y toca <b>Copiar firma</b>.</li>
+      <li>Ve a <b>Ajustes → Apps → Mail → Firma</b> (en iOS anteriores: Ajustes → Mail → Firma).</li>
+      <li>Si hay varias cuentas, elige <b>Por cuenta</b> y toca la de Eduardo.</li>
+      <li>Borra el texto que haya, mantén presionado y elige <b>Pegar</b>.</li>
+    </ol>
+    <div class="key"><b>Paso clave:</b> al pegar, iOS quita el formato. Justo después, <b>agita el iPhone</b> y toca <b>Deshacer</b> (o "Deshacer cambio de atributos"). Así recupera las dos columnas, colores e íconos tal cual.</div>
+    <ol start="5">
+      <li>Sal de Ajustes y abre un correo nuevo en Mail para confirmar.</li>
+    </ol>
+    </section>
+    <section class="panel" data-panel="p2"><p style="margin:0">El método más confiable si el paso de agitar no funciona en su iPhone:</p>
+    <ol>
+      <li>En la computadora, desde Gmail (donde la firma ya está instalada), envía un correo nuevo a <b>eduardo.j@hostdime.com.mx</b> que solo lleve la firma.</li>
+      <li>En el iPhone, abre ese correo en la app <b>Mail</b>.</li>
+      <li>Mantén presionado sobre la firma, selecciona desde la foto hasta los íconos de redes y toca <b>Copiar</b>.</li>
+      <li>Ve a <b>Ajustes → Mail → Firma</b>, borra lo que haya y <b>Pega</b>.</li>
+      <li><b>Agita el iPhone → Deshacer</b> para recuperar el formato.</li>
+    </ol></section>
+    <section class="panel" data-panel="p3">
+      <p style="margin:0">Si el botón no copió, selecciona la firma a mano:</p>
+    <button class="btn sec select">Seleccionar firma</button>
+    <ol>
+      <li>Con la firma ya seleccionada, toca <b>Copiar</b> en el menú que aparece.</li>
+      <li>Pégala en Ajustes → Mail → Firma y <b>agita → Deshacer</b>.</li>
+    </ol>
+    <p class="note">Si el logo sale como cuadro vacío, revisa que tengas conexión a internet: la imagen se carga desde asmexdc.com. Si ves texto azul subrayado, faltó el paso de agitar y deshacer.</p>
+    </section>
   </section>
 </main>
 
+<footer>Herramienta interna de instalación de firmas de correo · Optimizada para iPhone y Safari.</footer>
+
 <script>
-const sig = document.getElementById('sig');
-const msg = document.getElementById('msg');
-function say(t, ok){ msg.textContent = t; msg.className = ok ? 'ok' : 'err'; }
-
-document.querySelectorAll('.tabs button').forEach(b => b.addEventListener('click', () => {
-  document.querySelectorAll('.tabs button').forEach(x => x.setAttribute('aria-selected', x === b));
-  document.querySelectorAll('.panel').forEach(p => p.classList.toggle('on', p.id === b.dataset.p));
-}));
-
-function selectSig(){
-  const r = document.createRange(); r.selectNode(sig.querySelector('table'));
+function selectSig(workspace) {
+  const sig = workspace.querySelector('.sig table');
+  const r = document.createRange(); r.selectNode(sig);
   const s = getSelection(); s.removeAllRanges(); s.addRange(r); return s;
 }
-
-document.getElementById('copy').addEventListener('click', async () => {
-  const table = sig.querySelector('table');
-  try {
-    if (navigator.clipboard && window.ClipboardItem) {
-      await navigator.clipboard.write([new ClipboardItem({
-        'text/html': new Blob([table.outerHTML], {type:'text/html'}),
-        'text/plain': new Blob([table.innerText], {type:'text/plain'})
-      })]);
-      return say('Firma copiada. Pégala en Ajustes → Mail → Firma y después agita → Deshacer.', true);
-    }
-  } catch(e) {}
-  try {
-    const s = selectSig(); const ok = document.execCommand('copy'); s.removeAllRanges();
-    if (ok) return say('Firma copiada. Pégala en Ajustes → Mail → Firma y después agita → Deshacer.', true);
-  } catch(e) {}
-  say('No se pudo copiar automáticamente. Usa la pestaña "Si falla".', false);
+function say(workspace,t,ok) {
+  const msg=workspace.querySelector('.msg');
+  msg.textContent=t; msg.className='msg '+(ok?'ok':'err');
+}
+document.querySelectorAll('.open').forEach(btn=>btn.addEventListener('click',()=>{
+  document.querySelectorAll('.workspace').forEach(x=>x.classList.remove('active'));
+  const ws=document.getElementById(btn.dataset.open);
+  ws.classList.add('active');
+  ws.scrollIntoView({behavior:'smooth',block:'start'});
+}));
+document.querySelectorAll('.close').forEach(btn=>btn.addEventListener('click',()=>{
+  btn.closest('.workspace').classList.remove('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}));
+document.querySelectorAll('.tabs').forEach(nav=>nav.querySelectorAll('button').forEach(btn=>btn.addEventListener('click',()=>{
+  const ws=nav.closest('.workspace');
+  nav.querySelectorAll('button').forEach(x=>x.setAttribute('aria-selected',x===btn));
+  ws.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.dataset.panel===btn.dataset.p));
+})));
+document.querySelectorAll('.workspace').forEach(ws=>{
+  const copy=ws.querySelector('.copy');
+  copy.addEventListener('click',async()=>{
+    const table=ws.querySelector('.sig table');
+    try {
+      if(navigator.clipboard && window.ClipboardItem){
+        await navigator.clipboard.write([new ClipboardItem({
+          'text/html':new Blob([table.outerHTML],{type:'text/html'}),
+          'text/plain':new Blob([table.innerText],{type:'text/plain'})
+        })]);
+        return say(ws,'Firma copiada. Pégala en Ajustes → Apps → Mail → Firma y después agita → Deshacer.',true);
+      }
+    } catch(e) {}
+    try {
+      const s=selectSig(ws); const ok=document.execCommand('copy'); s.removeAllRanges();
+      if(ok) return say(ws,'Firma copiada. Pégala en Ajustes → Apps → Mail → Firma y después agita → Deshacer.',true);
+    } catch(e) {}
+    say(ws,'No se pudo copiar automáticamente. Usa la pestaña "Si falla".',false);
+  });
+  ws.querySelector('.select').addEventListener('click',()=>{selectSig(ws);ws.querySelector('.sig').scrollIntoView({behavior:'smooth',block:'center'});});
 });
-
-document.getElementById('select').addEventListener('click', () => {
-  selectSig(); sig.scrollIntoView({behavior:'smooth', block:'center'});
-});
+function fitPreviews(){
+  document.querySelectorAll('.sig').forEach(sig=>{
+    const box=sig.parentElement; const t=sig.querySelector('table'); if(!t)return;
+    sig.style.zoom=1;
+    const avail=box.clientWidth-32, need=Math.max(t.offsetWidth,t.scrollWidth);
+    if(need>avail) sig.style.zoom=(avail/need).toFixed(3);
+  });
+}
+addEventListener('load',fitPreviews); addEventListener('resize',fitPreviews); fitPreviews();
 </script>
 </body>
 </html>
